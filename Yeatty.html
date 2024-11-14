@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Yeatty</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YEATTY Panel</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #d3d3d3; /* Grey background */
+            font-family: Arial, sans-serif;
+            color: #000;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        /* Initial hidden panel */
+        #welcome-panel {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #d3d3d3; /* Grey background same as YEATTY page */
+            z-index: 1000;
+        }
+
+        #welcome-button {
+            background-color: #444; /* Same color as YEATTY title and button background */
+            color: #fff;
+            padding: 20px 40px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #welcome-button:hover {
+            background-color: #555;
+        }
+
+        .container {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            display: none; /* Initially hidden */
+        }
+
+        /* Typing effect for YEATTY */
+        #logo {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 0;
+            animation: typing 4s steps(7) forwards, rainbow 5s linear infinite;
+            font-weight: bold;
+            background-color: #444; /* Same color as button background */
+            color: white; /* Text color */
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 7ch; }
+        }
+
+        /* Rainbow effect for YEATTY */
+        #logo {
+            animation: typing 4s steps(7) forwards, rainbow 5s linear infinite;
+        }
+
+        @keyframes rainbow {
+            0% { color: red; }
+            14% { color: orange; }
+            28% { color: yellow; }
+            42% { color: green; }
+            57% { color: blue; }
+            71% { color: indigo; }
+            85% { color: violet; }
+            100% { color: red; }
+        }
+
+        button {
+            background-color: #444; /* Same color for buttons */
+            color: #fff;
+            border: none;
+            padding: 15px 25px;
+            margin: 10px;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        #discord-text {
+            margin-top: 20px;
+            font-size: 1rem;
+            color: #444; /* Same color as buttons */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Welcome Panel -->
+    <div id="welcome-panel">
+        <button id="welcome-button" onclick="openPanel()">WELCOME</button>
+    </div>
+
+    <!-- Main Panel -->
+    <div class="container" id="main-panel">
+        <!-- YEATTY Title -->
+        <div id="logo">YEATTY</div>
+        
+        <!-- Buttons -->
+        <div>
+            <button onclick="window.open('https://discord.gg/ffcKpyvm3G', '_blank')">Shop</button>
+            <button onclick="window.open('https://www.paypal.me/kingyeatty', '_blank')">PayPal</button>
+        </div>
+
+        <!-- Bottom text -->
+        <div id="discord-text">
+            Discord: yeatty
+        </div>
+    </div>
+
+    <script>
+        function openPanel() {
+            // Hide the welcome panel
+            document.getElementById('welcome-panel').style.display = 'none';
+            // Show the main panel
+            document.getElementById('main-panel').style.display = 'flex';
+        }
+    </script>
+
+</body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>
